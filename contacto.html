@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | TiendaDenisse</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="barra-promo">
+        ¡Solo por hoy! 20% de descuento en Skincare Hipoalergénico 🌟
+    </div>
+
+    <header>
+        <div class="cabecera-contenedor">
+            <a href="index.html" class="logo-enlace">
+                <div class="logo-icono"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                <div class="logo-texto">
+                    <h1>Tienda<span>Denisse</span></h1>
+                    <p>IESTP Huaycán</p>
+                </div>
+            </a>
+            <div class="buscador-caja">
+                <input type="text" placeholder="Buscar base, labial, tónico facial..." class="buscador-input">
+                <button class="buscador-boton"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <div class="cabecera-iconos">
+                <div class="icono-usuario">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Iniciar sesión</span>
+                </div>
+                <div class="icono-carrito">
+                    <div class="carrito-badge">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span class="badge">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="menu-navegacion">
+            <div class="menu-enlaces">
+                <a href="index.html">Inicio</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="blog.html">Blog</a>
+                <a href="contacto.html" class="activo">Contacto</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="seccion-contacto-pila">
+            
+            <h2 class="seccion-titulo"><span></span> Agenda tu Pedido o Consulta</h2>
+
+            <!-- FILA 1: Canales informativos posicionados arriba en paralelo -->
+            <div class="canales-contacto-linea">
+                <div class="tarjeta-info" style="margin-bottom: 0;">
+                    <h3><i class="fa-brands fa-whatsapp"></i> WhatsApp Directo</h3>
+                    <p style="font-weight: bold; font-size: 14px; margin-top: 4px; color: var(--color-oscuro);">999888777</p>
+                </div>
+                <div class="tarjeta-info" style="margin-bottom: 0;">
+                    <h3><i class="fa-solid fa-envelope"></i> Soporte y Dudas</h3>
+                    <p style="font-weight: bold; font-size: 14px; margin-top: 4px; color: var(--color-oscuro);">tiendadenisse@hotmail.com</p>
+                </div>
+            </div>
+
+            <!-- FILA 2: Formulario a ancho completo centralizado -->
+            <div class="formulario-ancho-completo">
+                <div class="formulario-inputs-grid">
+                    <div class="formulario-grupo">
+                        <label>Nombre Completo</label>
+                        <input type="text" class="formulario-input" placeholder="Ingresa tu nombre">
+                    </div>
+                    <div class="formulario-grupo">
+                        <label>Teléfono Celular</label>
+                        <input type="tel" class="formulario-input" placeholder="Ej. 999888777">
+                    </div>
+                </div>
+
+                <div class="formulario-inputs-grid">
+                    <div class="formulario-grupo">
+                        <label>Tipo de Cutis / Piel</label>
+                        <input type="text" class="formulario-input" placeholder="Ej. Sensible, Mixta, Grasa">
+                    </div>
+                    <div class="formulario-grupo">
+                        <label>Motivo del Contacto</label>
+                        <!-- Nuevo elemento añadido para romper la similitud de estructura -->
+                        <select class="formulario-input" style="color: #64748b; background-image: none;">
+                            <option value="">Selecciona una opción</option>
+                            <option value="pedido">Realizar un Pedido</option>
+                            <option value="asesoria">Asesoría de Colorimetría</option>
+                            <option value="duda">Consulta sobre Skincare</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="formulario-grupo">
+                    <label>Detalles del Pedido o Consulta de Skincare</label>
+                    <textarea rows="4" class="formulario-textarea" placeholder="Escribe de forma detallada los cosméticos que deseas solicitar o tus dudas de belleza..."></textarea>
+                </div>
+
+                <button class="boton-whatsapp" style="margin-top: 8px;"><i class="fa-brands fa-whatsapp"></i> Enviar Pedido por WhatsApp</button>
+            </div>
+
+            <!-- FILA 3: Mapa base inferior -->
+            <div class="mapa-caja" style="margin-top: 0;">
+                <div class="mapa-simulador">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243.90409033940398!2d-76.82360898703338!3d-12.011444523387805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105e9e1ab5dbcf3%3A0xd482a24aa01315c1!2sAv.%2015%20De%20Julio%20Mz.26%20-%20Lt.23%2C%20Lima%20Metropolitana%2015479!5e0!3m2!1ses-419!2spe!4v1783997152841!5m2!1ses-419!2spe" 
+                        loading="lazy" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen="">
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer-premium">
+        <div class="footer-premium-contenedor">
+            
+            <div class="footer-columnas-grid">
+                <!-- Columna 1: Branding y Propósito -->
+                <div class="columna-beauty">
+                    <h4 style="color: #ff8fa3; font-size: 16px; font-weight: 700; text-transform: none; margin-bottom: 12px;">TiendaDenisse</h4>
+                    <p>Tu boutique de confianza de cosméticos hipoalergénicos y cuidado dermatológico de marcas certificadas en Ate y todo Lima Este.</p>
+                </div>
+
+                <!-- Columna 2: NUEVA INFORMACIÓN (Reemplaza al Mapa del Sitio) -->
+                <div class="columna-beauty">
+                    <h4>Líneas de Belleza</h4>
+                    <ul>
+                        <li><a href="catalogo.html"><i class="fa-solid fa-angle-right" style="font-size: 10px; margin-right: 6px; color: #ff8fa3;"></i> Rostro y Bases</a></li>
+                        <li><a href="catalogo.html"><i class="fa-solid fa-angle-right" style="font-size: 10px; margin-right: 6px; color: #ff8fa3;"></i> Labiales Mates</a></li>
+                        <li><a href="catalogo.html"><i class="fa-solid fa-angle-right" style="font-size: 10px; margin-right: 6px; color: #ff8fa3;"></i> Cuidado Facial / Skincare</a></li>
+                        <li><a href="catalogo.html"><i class="fa-solid fa-angle-right" style="font-size: 10px; margin-right: 6px; color: #ff8fa3;"></i> Paletas de Ojos</a></li>
+                        <li><a href="catalogo.html"><i class="fa-solid fa-angle-right" style="font-size: 10px; margin-right: 6px; color: #ff8fa3;"></i> Fórmulas Veganas</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Información de Contacto Directo -->
+                <div class="columna-beauty">
+                    <h4>Atención al Cliente</h4>
+                    <ul style="gap: 12px;">
+                        <li><i class="fa-solid fa-location-dot" style="color: #ff8fa3; margin-right: 8px; width: 14px;"></i> Huaycán, Ate - Lima Este</li>
+                        <li><i class="fa-solid fa-phone" style="color: #ff8fa3; margin-right: 8px; width: 14px;"></i> 999888777</li>
+                        <li><i class="fa-solid fa-envelope" style="color: #ff8fa3; margin-right: 8px; width: 14px;"></i> soportetienda@hotmail.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Fila Inferior Sutil -->
+            <div class="footer-base-creditos">
+                <span>TiendaDenisse © 2026 - IESTP Huaycán. Confección de Interfaces de Usuario.</span>
+                <div class="redes-beauty-iconos">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-tiktok"></i>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- GLOBITO DE WHATSAPP FLOTANTE FIJO -->
+    <a href="https://wa.me/51999999999" class="btn-whatsapp-flotante" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>

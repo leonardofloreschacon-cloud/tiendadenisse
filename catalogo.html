@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo | TiendaDenisse</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="barra-promo">
+        ¡Solo por hoy! 20% de descuento en Skincare Hipoalergénico 🌟
+    </div>
+
+    <header>
+        <div class="cabecera-contenedor">
+            <a href="index.html" class="logo-enlace">
+                <div class="logo-icono"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                <div class="logo-texto">
+                    <h1>Tienda<span>Denisse</span></h1>
+                    <p>IESTP Huaycán</p>
+                </div>
+            </a>
+            <div class="buscador-caja">
+                <input type="text" placeholder="Buscar base, labial, tónico facial..." class="buscador-input">
+                <button class="buscador-boton"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <div class="cabecera-iconos">
+                <div class="icono-usuario">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Iniciar sesión</span>
+                </div>
+                <div class="icono-carrito">
+                    <div class="carrito-badge">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span class="badge">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="menu-navegacion">
+            <div class="menu-enlaces">
+                <a href="index.html">Inicio</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="catalogo.html" class="activo">Catálogo</a>
+                <a href="blog.html">Blog</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="catalogo-flex">
+            
+            <!-- BARRA LATERAL: Ampliada a 6 Filtros -->
+            <aside class="filtro-lateral">
+                <h3>Filtros por Tipo de Piel</h3>
+                <label class="filtro-opcion"><input type="checkbox"> Piel Sensible</label>
+                <label class="filtro-opcion"><input type="checkbox"> Piel Mixta o Grasa</label>
+                <label class="filtro-opcion"><input type="checkbox"> Piel Seca / Deshidratada</label>
+                <!-- Nuevos filtros añadidos -->
+                <label class="filtro-opcion"><input type="checkbox"> Piel con Tendencia al Acné</label>
+                <label class="filtro-opcion"><input type="checkbox"> Piel Madura / Anti-edad</label>
+                <label class="filtro-opcion"><input type="checkbox"> Fórmulas Veganas / Orgánicas</label>
+            </aside>
+
+            <!-- SECCIÓN DE PRODUCTOS: Ampliada a 9 Productos (Fila de 3x3) -->
+            <section style="flex: 1;">
+                <h2 class="seccion-titulo"><span></span> Todos los Cosméticos</h2>
+                <div class="grid-productos">
+                    
+                    <!-- Fila 1: Productos Iniciales -->
+                    <div class="tarjeta-producto">
+                        <div class="producto-imagen"><img src="m1.png" alt=""></i></div>
+                        <div>
+                            <span class="producto-marca">Neutrogena</span>
+                            <h4 class="producto-nombre">Base Hidratante con Ácido Hialurónico</h4>
+                            <div class="precio-caja">
+                                <span class="precio-actual">S/. 65.00</span>
+                            </div>
+                        </div>
+                        <button class="boton-carrito">Añadir al Carrito</button>
+                    </div>
+
+                    <div class="tarjeta-producto">
+                        <div class="producto-imagen"><img src="m2.png" alt=""></div>
+                        <div>
+                            <span class="producto-marca">Essence</span>
+                            <h4 class="producto-nombre">Corrector de Ojeras Mate</h4>
+                            <div class="precio-caja">
+                                <span class="precio-actual">S/. 35.00</span>
+                            </div>
+                        </div>
+                        <button class="boton-carrito">Añadir al Carrito</button>
+                    </div>
+
+                    <div class="tarjeta-producto">
+                        <div class="producto-imagen"><img src="m3.png" alt=""></div>
+                        <div>
+                            <span class="producto-marca">Revox</span>
+                            <h4 class="producto-nombre">Serum Concentrado Niacinamida</h4>
+                            <div class="precio-caja">
+                                <span class="precio-actual">S/. 40.00</span>
+                            </div>
+                        </div>
+                        <button class="boton-carrito">Añadir al Carrito</button>
+                    </div>
+
+                    <!-- Fila 2: Nuevos Productos Añadidos -->
+                    <div class="tarjeta-producto">
+                        <div class="producto-imagen"><img src="m4.png" alt=""></div>
+                        <div>
+                            <span class="producto-marca">Essence</span>
+                            <h4 class="producto-nombre">Máscara de Pestañas Efecto False</h4>
+                            <div class="precio-caja">
+                                <span class="precio-actual">S/. 30.00</span>
+                            </div>
+                        </div>
+                        <button class="boton-carrito">Añadir al Carrito</button>
+                    </div>
+
+                    <div class="tarjeta-producto">
+                        <div class="producto-imagen"><img src="m5.png" alt=""></div>
+                        <div>
+                            <span class="producto-marca">Maybelline</span>
+                            <h4 class="producto-nombre">Polvo Compacto Matificante Fit Me</h4>
+                            <div class="precio-caja">
+                                <span class="precio-actual">S/. 45.00</span>
+                            </div>
+                        </div>
+                        <button class="boton-carrito">Añadir al Carrito</button>
+                    </div>
+
+                    <div class="tarjeta-producto">
+                        <div class="producto-imagen"><img src="m6.png" alt=""></div>
+                        <div>
+                            <span class="producto-marca">Cerave</span>
+                            <h4 class="producto-nombre">Loción Hidratante Facial de Rostro</h4>
+                            <div class="precio-caja">
+                                <span class="precio-actual">S/. 58.00</span>
+                            </div>
+                        </div>
+                        <button class="boton-carrito">Añadir al Carrito</button>
+                    </div>
+
+                    <!-- Fila 3: Nuevos Productos Añadidos -->
+                    <div class="tarjeta-producto">
+                        <div class="producto-imagen"><img src="m7.png" alt=""></div>
+                        <div>
+                            <span class="producto-marca">La Roche-Posay</span>
+                            <h4 class="producto-nombre">Protector Solar Anthelios UV-Mune 400</h4>
+                            <div class="precio-caja">
+                                <span class="precio-actual">S/. 89.00</span>
+                            </div>
+                        </div>
+                        <button class="boton-carrito">Añadir al Carrito</button>
+                    </div>
+
+                    <div class="tarjeta-producto">
+                        <div class="producto-imagen"><img src="m8.png" alt=""></div>
+                        <div>
+                            <span class="producto-marca">L'Oréal</span>
+                            <h4 class="producto-nombre">Fijador de Maquillaje Infallible 24H</h4>
+                            <div class="precio-caja">
+                                <span class="precio-actual">S/. 52.00</span>
+                            </div>
+                        </div>
+                        <button class="boton-carrito">Añadir al Carrito</button>
+                    </div>
+
+                    <div class="tarjeta-producto">
+                        <div class="producto-imagen"><img src="m9.png" alt=""></div>
+                        <div>
+                            <span class="producto-marca">The Ordinary</span>
+                            <h4 class="producto-nombre">Sérum Peeling AHA 30% + BHA 2%</h4>
+                            <div class="precio-caja">
+                                <span class="precio-actual">S/. 48.00</span>
+                            </div>
+                        </div>
+                        <button class="boton-carrito">Añadir al Carrito</button>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- PIE DE PÁGINA CON SECCIÓN DE CATEGORÍAS CAMBIADA -->
+    <footer class="footer-premium">
+        <div class="footer-premium-contenedor">
+            
+            <div class="footer-columnas-grid">
+                <!-- Columna 1: Branding y Propósito -->
+                <div class="columna-beauty">
+                    <h4 style="color: #ff8fa3; font-size: 16px; font-weight: 700; text-transform: none; margin-bottom: 12px;">TiendaDenisse</h4>
+                    <p>Tu boutique de confianza de cosméticos hipoalergénicos y cuidado dermatológico de marcas certificadas en Ate y todo Lima Este.</p>
+                </div>
+
+                <!-- Columna 2: NUEVA INFORMACIÓN (Reemplaza al Mapa del Sitio) -->
+                <div class="columna-beauty">
+                    <h4>Líneas de Belleza</h4>
+                    <ul>
+                        <li><a href="catalogo.html"><i class="fa-solid fa-angle-right" style="font-size: 10px; margin-right: 6px; color: #ff8fa3;"></i> Rostro y Bases</a></li>
+                        <li><a href="catalogo.html"><i class="fa-solid fa-angle-right" style="font-size: 10px; margin-right: 6px; color: #ff8fa3;"></i> Labiales Mates</a></li>
+                        <li><a href="catalogo.html"><i class="fa-solid fa-angle-right" style="font-size: 10px; margin-right: 6px; color: #ff8fa3;"></i> Cuidado Facial / Skincare</a></li>
+                        <li><a href="catalogo.html"><i class="fa-solid fa-angle-right" style="font-size: 10px; margin-right: 6px; color: #ff8fa3;"></i> Paletas de Ojos</a></li>
+                        <li><a href="catalogo.html"><i class="fa-solid fa-angle-right" style="font-size: 10px; margin-right: 6px; color: #ff8fa3;"></i> Fórmulas Veganas</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Información de Contacto Directo -->
+                <div class="columna-beauty">
+                    <h4>Atención al Cliente</h4>
+                    <ul style="gap: 12px;">
+                        <li><i class="fa-solid fa-location-dot" style="color: #ff8fa3; margin-right: 8px; width: 14px;"></i> Huaycán, Ate - Lima Este</li>
+                        <li><i class="fa-solid fa-phone" style="color: #ff8fa3; margin-right: 8px; width: 14px;"></i> 999-XXX-XXX</li>
+                        <li><i class="fa-solid fa-envelope" style="color: #ff8fa3; margin-right: 8px; width: 14px;"></i> soporte@tiendadenisse.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Fila Inferior Sutil -->
+            <div class="footer-base-creditos">
+                <span>TiendaDenisse © 2026 - IESTP Huaycán. Confección de Interfaces de Usuario.</span>
+                <div class="redes-beauty-iconos">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-tiktok"></i>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- GLOBITO DE WHATSAPP FLOTANTE FIJO -->
+    <a href="https://wa.me/51999999999" class="btn-whatsapp-flotante" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    </a>
+
+</body>
+</html>

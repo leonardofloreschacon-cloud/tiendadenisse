@@ -1,0 +1,888 @@
+/* estilo.css */
+
+/* Importación de fuente moderna desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Variables globales de color y estilo (Identidad Aruma) */
+:root {
+    --color-principal: #e01e5a; /* Fucsia */
+    --color-secundario: #ff8fa3; /* Rosa pastel */
+    --color-fondo-suave: #fff5f6; /* Crema/nude suave */
+    --color-oscuro: #1e293b; /* Pizarra oscuro para textos */
+    --color-gris-suave: #f1f5f9; /* Gris para cajas e inputs */
+    --color-blanco: #ffffff;
+    --fuente-base: 'Poppins', sans-serif;
+    --sombra-suave: 0 4px 12px rgba(224, 30, 90, 0.05);
+    --sombra-hover: 0 8px 24px rgba(224, 30, 90, 0.12);
+}
+
+/* Estilos Generales y Reseteo */
+* {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente-base);
+    background-color: #fafaf9;
+    color: var(--color-oscuro);
+    line-height: 1.6;
+    
+    /* SOLUCIÓN AL ESPACIO BLANCO INFERIOR */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 16px;
+    flex: 1; /* Esto hace que ocupe todo el espacio disponible */
+}
+/* Barra de Promociones Superior */
+.barra-promo {
+    background: linear-gradient(90deg, var(--color-principal), #ff4d6d);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Cabecera Principal (Header Sticky) */
+header {
+    background-color: var(--color-blanco);
+    border-bottom: 1px solid var(--color-gris-suave);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.cabecera-contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+/* Identidad Visual del Logo */
+.logo-enlace {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.logo-icono {
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-fondo-suave);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-principal);
+    font-size: 20px;
+}
+
+.logo-texto h1 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-oscuro);
+}
+
+.logo-texto span {
+    color: var(--color-principal);
+}
+
+.logo-texto p {
+    font-size: 9px;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Barra de Búsqueda Principal */
+.buscador-caja {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+}
+
+.buscador-input {
+    width: 100%;
+    padding: 10px 48px 10px 16px;
+    background-color: var(--color-gris-suave);
+    border: 1px solid transparent;
+    border-radius: 9999px;
+    font-size: 13px;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.buscador-input:focus {
+    background-color: var(--color-blanco);
+    border-color: var(--color-secundario);
+}
+
+.buscador-boton {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #64748b;
+    cursor: pointer;
+}
+
+.buscador-boton:hover {
+    color: var(--color-principal);
+}
+
+/* Área de Iconos de Cuenta y Carrito */
+.cabecera-iconos {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.icono-usuario, .icono-carrito {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #475569;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.icono-usuario:hover, .icono-carrito:hover {
+    color: var(--color-principal);
+}
+
+.carrito-badge {
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    font-size: 9px;
+    font-weight: bold;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Menú de Navegación de la Web */
+.menu-navegacion {
+    background-color: var(--color-blanco);
+    border-top: 1px solid var(--color-gris-suave);
+}
+
+.menu-enlaces {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12px 16px;
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.menu-enlaces a {
+    text-decoration: none;
+    color: #475569;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-bottom: 4px;
+    transition: color 0.3s;
+}
+
+.menu-enlaces a:hover, .menu-enlaces a.activo {
+    color: var(--color-principal);
+    border-bottom: 2px solid var(--color-principal);
+}
+
+/* Contenedor Semántico Central */
+
+/* Distribución de Banners en Inicio */
+.banner-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+@media (min-width: 992px) {
+    .banner-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+.banner-grande {
+    /* AQUÍ PONES LA RUTA DE TU IMAGEN */
+    background-image: linear-gradient(135deg, rgba(255, 240, 242, 0.4) 0%, rgba(15, 23, 42, 0.85) 100%), url(maquillaje.png);
+    
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #ffd0d6;
+    border-radius: 24px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 350px;
+    position: relative;
+}
+
+/* Modificamos los textos internos para que pasen a color blanco y resalten sobre la foto */
+.banner-grande h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #ffffff !important; /* Texto blanco */
+    line-height: 1.1;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Sombra para que se lea mejor */
+}
+
+.banner-grande p {
+    font-size: 14px;
+    color: #f1f5f9 !important; /* Texto gris muy claro */
+    max-width: 380px;
+    margin-bottom: 24px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.tag-nuevo {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 4px 12px;
+    border-radius: 999px;
+    align-self: flex-start;
+    margin-bottom: 12px;
+}
+
+.banner-grande h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--color-oscuro);
+    line-height: 1.1;
+    margin-bottom: 8px;
+}
+
+.banner-grande p {
+    font-size: 14px;
+    color: #475569;
+    max-width: 380px;
+    margin-bottom: 24px;
+}
+
+.boton-comprar {
+    display: inline-block;
+    background-color: var(--color-oscuro);
+    color: var(--color-blanco);
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 12px 28px;
+    border-radius: 9999px;
+    transition: background-color 0.3s;
+}
+
+.boton-comprar:hover {
+    background-color: var(--color-principal);
+}
+
+.banners-columna {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.banner-mini {
+    border-radius: 24px;
+    padding: 24px;
+    height: 167px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.banner-mini.rosa {
+    background: linear-gradient(90deg, #ff4d6d, #ff8fa3);
+    color: var(--color-blanco);
+}
+
+.banner-mini.oscuro {
+    background-color: var(--color-oscuro);
+    color: var(--color-blanco);
+}
+
+.banner-mini h3 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.banner-mini p {
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+.banner-mini a {
+    color: var(--color-blanco);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.banner-mini.oscuro a {
+    color: var(--color-secundario);
+}
+
+/* Tarjetas Informativas Secundarias */
+.columnas-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+    .columnas-info {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.tarjeta-info {
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-gris-suave);
+    padding: 24px;
+    border-radius: 16px;
+}
+
+.tarjeta-info h3 {
+    color: var(--color-principal);
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.tarjeta-info p {
+    font-size: 11px;
+    color: #64748b;
+}
+
+/* Indicadores de Títulos de Sección */
+.seccion-titulo {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.seccion-titulo span {
+    width: 4px;
+    height: 24px;
+    background-color: var(--color-principal);
+    border-radius: 2px;
+}
+
+/* Grilla del Catálogo de Productos (3x3 en Desktop) */
+/* ========================================================
+   DISEÑO ALINEADO Y COMPACTO DE TARJETAS DE PRODUCTOS
+   ======================================================== */
+
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+@media (min-width: 768px) {
+    .grid-productos {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas perfectas en desktop */
+    }
+}
+
+.tarjeta-producto {
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-gris-suave);
+    border-radius: 16px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px; /* ALTURA FIJA: Evita que las tarjetas se estiren verticalmente */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta-producto:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sombra-hover);
+}
+
+.producto-imagen {
+    width: 100%;
+    height: 200px; /* ALTURA FIJA DE IMAGEN: Forzar a que todas las fotos ocupen el mismo espacio */
+    background-color: #f8fafc; /* Fondo suave para resaltar los envases */
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    overflow: hidden; /* Corta cualquier desborde extraño */
+}
+
+.producto-imagen img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain; /* Encaja la botella/tubo perfectamente sin deformar ni estirar */
+    padding: 12px; /* Margen interno para que el producto respire */
+}
+
+.producto-marca {
+    font-size: 9px;
+    color: #94a3b8;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: block;
+}
+
+.producto-nombre {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-oscuro);
+    margin-top: 2px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limita el texto a máximo 2 líneas */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 36px; /* Altura constante para que el precio no se mueva de su lugar */
+}
+
+.precio-caja {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 6px;
+}
+
+.precio-actual {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-principal);
+}
+
+.boton-carrito {
+    width: 100%;
+    background-color: var(--color-oscuro);
+    color: var(--color-blanco);
+    border: none;
+    border-radius: 12px;
+    padding: 10px;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: auto; /* Empuja el botón al fondo de la tarjeta */
+    transition: background-color 0.3s;
+}
+
+.boton-carrito:hover {
+    background-color: var(--color-principal);
+}
+/* Flexbox del Catálogo Completo */
+.catalogo-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+@media (min-width: 992px) {
+    .catalogo-flex {
+        flex-direction: row;
+    }
+}
+
+.filtro-lateral {
+    width: 100%;
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-gris-suave);
+    padding: 24px;
+    border-radius: 16px;
+    height: fit-content;
+}
+
+@media (min-width: 992px) {
+    .filtro-lateral {
+        width: 250px;
+    }
+}
+
+.filtro-lateral h3 {
+    font-size: 14px;
+    font-weight: 700;
+    border-bottom: 1px solid var(--color-gris-suave);
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+}
+
+.filtro-opcion {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+/* Grilla del Blog Ampliado (3x2 en Desktop) */
+.grid-blog {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+@media (min-width: 768px) {
+    .grid-blog {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.tarjeta-blog {
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-gris-suave);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: box-shadow 0.3s;
+}
+
+.tarjeta-blog:hover {
+    box-shadow: var(--sombra-hover);
+}
+
+/* Estructura del Contenedor de Nosotros */
+.contenedor-nosotros {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.nosotros-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin: 32px 0;
+}
+
+@media (min-width: 768px) {
+    .nosotros-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ========================================================
+   REESTRUCTURACIÓN DE CONTACTO POR FILAS (DISEÑO EXCLUSIVO)
+   ======================================================== */
+
+.seccion-contacto-pila {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 24px;
+}
+
+.canales-contacto-linea {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+@media (min-width: 768px) {
+    .canales-contacto-linea {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.formulario-ancho-completo {
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-gris-suave);
+    padding: 32px;
+    border-radius: 24px;
+    box-shadow: var(--sombra-suave);
+    width: 100%;
+}
+
+.formulario-inputs-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+    .formulario-inputs-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.formulario-grupo {
+    margin-bottom: 16px;
+}
+
+.formulario-grupo label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #64748b;
+}
+
+.formulario-input, .formulario-textarea {
+    width: 100%;
+    background-color: var(--color-gris-suave);
+    border: 1px solid transparent;
+    padding: 12px;
+    font-size: 12px;
+    border-radius: 12px;
+    outline: none;
+    margin-top: 4px;
+    transition: all 0.3s;
+}
+
+.formulario-input:focus, .formulario-textarea:focus {
+    background-color: var(--color-blanco);
+    border-color: var(--color-principal);
+}
+
+.boton-whatsapp {
+    width: 100%;
+    background-color: #059669;
+    color: var(--color-blanco);
+    border: none;
+    border-radius: 12px;
+    padding: 14px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background-color 0.3s;
+}
+
+.boton-whatsapp:hover {
+    background-color: #047857;
+}
+
+.mapa-caja {
+    border: 1px solid var(--color-gris-suave);
+    background-color: var(--color-blanco);
+    padding: 16px;
+    border-radius: 24px;
+}
+
+.mapa-simulador {
+    background-color: var(--color-gris-suave);
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 24px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 11px;
+    color: #64748b;
+}
+
+/* ========================================================
+   REDISEÑO PREMIUM MINIMALISTA PARA EL FOOTER (TIENDADENISSE)
+   ======================================================== */
+
+.footer-premium {
+    background-color: #111625 !important; /* Gris oscuro profundo tecnológico/estético */
+    color: #ffffff !important;
+    padding: 48px 24px 32px;
+    border: none !important;
+}
+
+.footer-premium-contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Grilla principal de 3 columnas bien espaciadas */
+.footer-columnas-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+
+@media (min-width: 768px) {
+    .footer-columnas-grid {
+        grid-template-columns: 1.5fr 1fr 1.2fr; /* Estructura asimétrica limpia */
+    }
+}
+
+.columna-beauty h4 {
+    color: #ff8fa3 !important; /* Tono rosa pastel suave de Aruma */
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.columna-beauty p, .columna-beauty li {
+    font-size: 12.5px;
+    color: #94a3b8 !important; /* Texto gris claro para excelente lectura */
+    line-height: 1.6;
+}
+
+.columna-beauty ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.columna-beauty ul a {
+    color: #94a3b8 !important;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.columna-beauty ul a:hover {
+    color: #ff8fa3 !important;
+}
+
+/* Bloque inferior de créditos */
+.footer-base-creditos {
+    border-top: 1px solid #1e293b !important; /* Línea muy sutil y delgada integrada al fondo */
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    font-size: 12px;
+    color: #64748b !important;
+}
+
+@media (min-width: 768px) {
+    .footer-base-creditos {
+        flex-direction: row;
+    }
+}
+
+.redes-beauty-iconos {
+    display: flex;
+    gap: 16px;
+    font-size: 16px;
+    color: #94a3b8;
+}
+
+.redes-beauty-iconos i {
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.redes-beauty-iconos i:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+/* Componente Fijo: Globo Flotante de WhatsApp */
+.btn-whatsapp-flotante {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background-color: #25d366;
+    color: #ffffff;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.btn-whatsapp-flotante:hover {
+    transform: scale(1.1);
+}
+.columna-beauty ul li font-bold {
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* Control del contenedor del mapa */
+.mapa-caja {
+    width: 100%;
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-gris-suave);
+    padding: 16px;
+    border-radius: 24px;
+    box-shadow: var(--sombra-suave);
+}
+
+/* Contenedor interno del mapa interactivo */
+.mapa-simulador {
+    width: 100%;
+    height: 300px; /* Altura ideal y estética para la sección */
+    border-radius: 16px;
+    overflow: hidden; /* Esto obliga al mapa a respetar las esquinas redondeadas */
+    position: relative;
+}
+
+/* Hace que el mapa de Google ocupe el 100% de su contenedor sin desbordarse */
+.mapa-simulador iframe {
+    width: 100% !important;
+    height: 100% !important;
+    border: 0;
+}
